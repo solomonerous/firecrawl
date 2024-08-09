@@ -212,4 +212,40 @@ export const urlSpecificParams = {
         engine: "playwright",
       }
   },
+  "mendable.ai":{
+    defaultScraper: "fire-engine",
+    params:{
+      fireEngineOptions:{
+        mobileProxy: true,
+        method: "get",
+        engine: "chrome-cdp",
+      },
+    },
+  },
+  "developer.apple.com":{
+    defaultScraper: "fire-engine",
+    params:{
+      engine: "playwright",
+      wait: 2000,
+      fireEngineOptions: {
+        blockMedia: false,
+      }
+    },
+  },
+  "amazon.com":{
+    defaultScraper: "fire-engine",
+    params:{
+      fireEngineOptions:{
+        engine: "chrome-cdp",
+      },
+    },
+  },
+  "digikey.com":{
+    defaultScraper: "fire-engine",
+    params:{
+      fireEngineOptions:{
+        engine: "tlsclient",
+      },
+    },
+  }
 };

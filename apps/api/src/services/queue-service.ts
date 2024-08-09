@@ -1,5 +1,6 @@
 import Queue from "bull";
 import { Queue as BullQueue } from "bull";
+import { Logger } from "../lib/logger";
 
 let webScraperQueue: BullQueue;
 
@@ -13,10 +14,10 @@ export function getWebScraperQueue() {
         maxStalledCount: 10,
       },
       defaultJobOptions:{
-        attempts: 5
+        attempts: 2
       }
     });
-    console.log("Web scraper queue created");
+    Logger.info("Web scraper queue created");
   }
   return webScraperQueue;
 }
